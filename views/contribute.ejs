@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <% include templates/head.ejs %>
+      <link href="/stylesheets/map.css" rel="stylesheet" type="text/css">
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 41.9028, lng: 12.4964},
+            zoom: 3
+          });
+        }
+      </script>
+    </head>
+    
+    <body>
+        <!-- This imports the navigation template I made -->
+        <% include templates/navigation.ejs %>
+        <div id="wrapper">
+            <% include templates/sidebar.ejs %>
+            <!-- Page Content -->
+            <div id = "page-content-wrapper">
+                <div class="container-fluid">
+                    <div class = "row">
+                        <div class = "text-center">
+                            <h3>This will be where you choose the city to contribute to</h3>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div id="map"></div>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6J6faI3ve9GCDkIu68JBGO1amyKNnts&libraries=places&callback=initMap">
+                        </script>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  
+        <script>
+            //sidebar toggle
+            $("#menu-toggle").click( function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("menuDisplayed");
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

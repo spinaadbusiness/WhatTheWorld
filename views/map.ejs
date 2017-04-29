@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <% include templates/head.ejs %>
+      <link href="/stylesheets/map.css" rel="stylesheet" type="text/css">
+      <script>
+          var cityList = <%- cityList %>;
+      </script>
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 41.9028, lng: 12.4964},
+            zoom: 3
+          });
+
+          var infowindow = new google.maps.InfoWindow();
+          var service = new google.maps.places.PlacesService(map);
+          for(i = 0; i < cityList.length; ++i)
+          {
+            service.getDetails({
+              placeId: cityList[i].placeID
+            }, function(place, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker = new google.maps.Marker({
+                  map: map,
+                  position: place.geometry.location
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                    'Place ID: ' + place.place_id + '<br>' +
+                    place.formatted_address + '</div>');
+                  infowindow.open(map, this);
+                });
+              }
+            });
+          }
+        }
+      </script>
+    </head>
+    
+    <body>
+        <!-- This imports the naviagtion template I made -->
+        <% include templates/navigation.ejs %>
+        <div id="wrapper">
+            <% include templates/sidebar.ejs %>
+            <!-- Page Content -->
+            <div id = "page-content-wrapper">
+                <div class="container-fluid">
+                    <div class = "row">
+                        <div class = "text-center">
+                            <h3>Cities You've Liked</h3>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div id="map"></div>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6J6faI3ve9GCDkIu68JBGO1amyKNnts&libraries=places&callback=initMap">
+                            //AIzaSyDZTZIYQrqUmOsZQYMhnnmFYGBRKM3aUrM for spinaadbusiness api key
+                        </script>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  
+        <script>
+            //sidebar toggle
+            $("#menu-toggle").click( function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("menuDisplayed");
+            });
+            //TODO:: add swipe functionality
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

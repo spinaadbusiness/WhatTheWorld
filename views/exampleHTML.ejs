@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>whatTheWorld</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class = "container">
+        <h2> Check out this Place! </h2>
+        <div class = "well"> Basic Well </div>
+        <div class = "well well-sm"> Small Well </div>
+        <div class = "alert alert-success"> Basic Well </div>
+        <div class = "alert alert info">
+            <a href = "#" class = "close" data-dismiss = "alert" aria-label = "close"> &times; </a> Basic Well 
+        </div>
+        <div class = "alert alert-danger fade in">
+            <a href = "#" class = "close" data-dismiss = "alert" aria-label = "close"> &times; </a> Basic Well 
+        </div>
+    </div>
+
+    <!-- This imports a template I made -->
+    <% include templates/navigation.ejs %>
+    <div class="container">
+
+        <!-- This imports an image -->
+        <img src = "../images/groningen1.jpg" class = "img-rounded" width = "230" height = "230">
+
+        <!-- Embedded Responsive Item -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class='embed-responsive-item' src = "https://www.youtube.com/watch?v=ClHu3XQBnGU&index=5&list=PL6gx4Cwl9DGBPw1sFodruZUPheWVKchlM"></iframe>>
+        </div>
+
+        <br>
+        <!-- highlighting -->
+        <p>You can highlight text with the
+            <mark>mark tags</mark>
+            if you want.
+        </p>
+
+        <!-- quotes -->
+        <blockquote>
+            <p>You can quote someone with this code</p>
+            <footer>My Grandpa</footer>
+        </blockquote>
+
+        <!-- lists -->
+        <h4>You can list things like this</h4>
+        <dl>
+            <dt>Indoors</dt>
+            <dd>- take a nap</dd>
+            <dd>- watch Netflix for 8 hours</dd>
+            <dt>Outdoors</dt>
+            <dd>- go back inside</dd>
+        </dl>
+
+        <!-- code -->
+        <p>To set the users weight use <code>setUserWeight(374);</code> with an integer</p>
+
+        <!-- multi line code -->
+        <p>For multiple lines of code, use the pre element:</p>
+<pre>
+for n in range(101):
+    if(n % 4 is 0):
+        print(n)
+</pre>
+
+        <!-- keyboard input -->
+        <p>This is supposed to define keyboard input <kbd>Ctrl+Alt+Del</kbd></p>
+
+        <!-- contextual colors -->
+        <h4>Provides build in text color classes for different events</h4>
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-danger">This text represents danger.</p>
+
+        <!-- background colors -->
+        <p class="bg-success">This text indicates success.</p>
+        <p class="bg-danger">This text represents danger.</p>
+
+    </div>
+
+    <li><a href="#" data-toggle = "modal" data-target = "#popUpWindow">Facebook</li>
+                            <li><a href="#" data-toggle = "modal" data-target = "#popUpWindow">Google+</li>
+
+    
+
+</body>
+</html>
+

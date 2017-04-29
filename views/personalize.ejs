@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/stylesheets/personalize.css" rel="stylesheet" type="text/css">
+    </head>
+    <% include templates/head.ejs %>
+    <body>
+        <!-- This imports the naviagtion template I made -->
+        <% include templates/navigation.ejs %>
+        <div id="wrapper">
+            <% include templates/sidebar.ejs %>
+            <!-- Page Content -->
+            <div id = "page-content-wrapper">
+                <div class="container-fluid">
+                    <!-- This imports an image -->
+                    <div class = "row">
+                        <div class = "text-center">
+                             <p>*This will have questions for the user in order to collect information about what they like* </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <script>
+            //sidebar toggle
+            $("#menu-toggle").click( function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("menuDisplayed");
+            });
+            //key functionality for carousel
+            $(document).bind('keyup', function(e) {
+                if(e.which == 39){
+                    //TODO:: use keys to answer questions
+                }
+                else if(e.which == 37){
+                    //TODO:: use keys to answer questions
+                }
+                else if(e.which == 38){
+                    //TODO:: use keys to answer questions
+                }
+                else if(e.which == 40){
+                    //TODO:: use keys to answer questions
+                }
+            });
+            //TODO:: add swipe functionality
+        </script>    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

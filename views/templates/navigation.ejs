@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/stylesheets/navigation.css" rel="stylesheet" type="text/css">
+    </head>
+	<nav class = "navbar navbar-default">
+		<div class = "container-fluid">
+			<!-- Logo -->
+			<div class = "navbar-header">
+				<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#mainNavBar"> 
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+                <a id = "menu-toggle" class="navbar-brand" href=""><img src="/images/whatTheWorld.png" alt="WHAT THE WORLD"></a>
+			</div>
+			<!-- navbar items -->
+			<div class = "collapse navbar-collapse" = id = "mainNavBar">
+				<ul class = "nav navbar-nav">
+					<li class="active"><a href="/">Home</a></li>
+					<!-- Drop Down Menu -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
+						<ul class = "dropdown-menu">
+							<li><a href="#" data-toggle = "modal" data-target = "#popUpWindowFacebook">Facebook</a></li>
+							<li><a href="#" data-toggle = "modal" data-target = "#popUpWindowGoogle">Google+</a></li>
+						</ul>
+					</li>
+					<li><a href="/personalize">Personalize</a></li>
+					<li><a href="/map">Map</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class = "modal fade" id = "popUpWindowFacebook">
+        <div class = "modal-dialog">
+            <div class = "modal-content">
+                <!-- Header -->
+                <div class = "modal-header">
+                    <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+                    <h3 class = "modal-title">Login with Facebook</h3>
+                </div>
+                <!-- Body(form) -->
+                <div class = "modal-body">
+                    <form role = "form">
+                    	<div class = "form-group">
+                    		<input type = "email" class = "form-control" placeholder = "Email">
+                    	</div>
+                    	<div class = "form-group">
+                    		<input type = "password" class = "form-control" placeholder = "Password">
+                    	</div>
+                    </form>
+                </div>
+                <!-- Footer -->
+                <div class = "modal-footer">
+                    <button class = "btn btn-primary btn-block">Log In</button>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "modal fade" id = "popUpWindowGoogle">
+        <div class = "modal-dialog">
+            <div class = "modal-content">
+                <!-- Header -->
+                <div class = "modal-header">
+                    <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+                    <h3 class = "modal-title">Login with Google+</h3>
+                </div>
+                <!-- Body(form) -->
+                <div class = "modal-body">
+                    <form role = "form">
+                    	<div class = "form-group">
+                    		<input type = "email" class = "form-control" placeholder = "Email">
+                    	</div>
+                    	<div class = "form-group">
+                    		<input type = "password" class = "form-control" placeholder = "Password">
+                    	</div>
+                    </form>
+                </div>
+                <!-- Footer -->
+                <div class = "modal-footer">
+                    <button class = "btn btn-danger btn-block">Login</button>     
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
