@@ -3,6 +3,14 @@ $("#menu-toggle").click( function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("menuDisplayed");
 });
+//toggle to show flights
+$("#flight-toggle").click( function(e) {
+    $("#flightsPane").replaceWith("<div>" + "<p>Searching for Flights</p>" + "</div>");
+});
+//toggle to show hotels
+$("#hotel-toggle").click( function(e) {
+    $("#hotelPane").replaceWith("<div>" + "<p>Searching for Hotels</p>" + "</div>");
+});
 //carousel settings
 $('.carousel').carousel({
     interval: 3000,
@@ -19,9 +27,11 @@ $(document).bind('keyup', function(e) {
     }
     else if(e.which == 38){
         //TODO:: Up arrow to save city
+        location.reload();
     }
     else if(e.which == 40){
         //TODO:: Down arrow to dislike city
+        //location.reload();
     }
 });
 //TODO:: add swipe functionality
