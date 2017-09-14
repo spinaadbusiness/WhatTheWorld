@@ -12,7 +12,8 @@
     "cookie-parser": "~1.4.3",
     "body-parser": "~1.18.1",
     "debug": "~3.0.1",
-    "ejs": "~2.5.7"
+    "ejs": "~2.5.7",
+    "foursquarevenues": "~3.0.1"
   },
   "engines": {
     "nodejs": "4.2.6",
