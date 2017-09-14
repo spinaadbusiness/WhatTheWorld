@@ -16,7 +16,7 @@
     "foursquarevenues": "~3.0.1"
   },
   "engines": {
-    "nodejs": "4.2.6",
+    "node": "4.2.6",
     "npm": "3.5.2"
   }
 }
