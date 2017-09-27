@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--<link href="/stylesheets/login.css" rel="stylesheet" type="text/css">-->
+    </head>
+    <% include templates/head.ejs %>
+    <body>
+        <!-- This imports the naviagtion template I made -->
+        <% include templates/navigation.ejs %>
+        <div id="wrapper">
+            <% include templates/sidebar.ejs %>
+            <!-- Page Content -->
+            <div id = "page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="panel panel-login">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <button href="/auth/facebook" class="btn-facebook">Login with Facebook</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+  
+        <script>
+            //sidebar toggle
+            $("#menu-toggle").click( function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("menuDisplayed");
+            });
+        </script>
+        <script src= "/javascripts/loginCode.js">
+            //Here be all the code for index.ejs
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,19 +1,29 @@
 {
   "name": "whattheworld",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.18.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~3.0.1",
-    "ejs": "~2.5.7",
-    "express": "~4.15.4",
-    "foursquarevenues": "~3.0.1",
-    "morgan": "~1.8.2",
-    "serve-favicon": "^2.4.4"
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "flash": "*",
+    "foursquarevenues": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-local": "*",
+    "static-favicon": "*",
+    "travelpayouts": "*"
   },
   "engines": {
     "node": "4.2.6",
