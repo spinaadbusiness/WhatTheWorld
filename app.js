@@ -18,7 +18,7 @@ var InstagramStrategy = require('passport-instagram').Strategy;
 var app = express();
 
 // connect to the database
-mongoose.connect('mongodb://localhost/passport-example');
+//mongoose.connect('mongodb://localhost/passport-example');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
