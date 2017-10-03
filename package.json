@@ -23,6 +23,7 @@
     "passport-facebook": "*",
     "passport-twitter": "*",
     "passport-google-oauth": "*",
+    "passport-google-oauth2": "*",
     "passport-google": "*",
     "passport-instagram": "*",
     "passport-local": "*",
