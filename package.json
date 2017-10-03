@@ -22,7 +22,7 @@
     "passport": "*",
     "passport-facebook": "*",
     "passport-local": "*",
-    "static-favicon": "*",
+    "serve-favicon": "*",
     "travelpayouts": "*"
   },
   "engines": {
