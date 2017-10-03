@@ -21,6 +21,10 @@
     "morgan": "*",
     "passport": "*",
     "passport-facebook": "*",
+    "passport-twitter": "*",
+    "passport-google-oauth": "*",
+    "passport-google": "*",
+    "passport-instagram": "*",
     "passport-local": "*",
     "serve-favicon": "*",
     "travelpayouts": "*"
