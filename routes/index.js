@@ -26,26 +26,30 @@ router.get('/', function(req, res) {
 
 	var params = {
 		"venuePhotos" : '1',
-		"categoryId" : "4bf58dd8d48988d12d941735", //this is monuments/landmarks id
+		//"categoryId" : "4bf58dd8d48988d12d941735", //this is monuments/landmarks id
     	"near" : cityData.cityName + ", " + cityData.country,
-    	"intent" : "browse",
-    	"limit" : '20',
-    	"locale" : "en"
+    	//"intent" : "browse",
+    	"limit" : '10',
+    	//"locale" : "en"
 	};
 
 	var venueData = [];
-	foursquare.getVenues(params, function(error, venues) {
+	foursquare.exploreVenues(params, function(error, venues) {
 	    if (!error) 
 	    {
+	    	console.log("4square success");
+	    	console.log(venues.response);
+	    	//to get photo urls look in object at below point
+	    	//console.log(venues.response.groups[0].items[0].venue.featuredPhotos);
 		    res.render('index', {
 				cityData : cityData,
-				cityFoursquareData : venues.response.venues,
+				cityFoursquareData : venues.response.groups[0].items,
 			});
 	    }
 	    else
 	    {
-
 	    	console.log("Failure: foursquare failed to get Venues.");
+	    	console.log(venues);
 	    	res.render('index', {
 				cityData : cityData,
 			});

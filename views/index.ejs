@@ -78,7 +78,7 @@
                             <div id="toDoPane"> 
                             <h3>Things to Do:</h3>
                             <% for(var i = 0; i < cityFoursquareData.length; ++i) {%>
-                                <div><%- JSON.stringify(cityFoursquareData[i].name) %></div>
+                                <div><%- JSON.stringify(cityFoursquareData[i].venue.name) %></div>
                             <% } %>
                             </div>
                         </div>
